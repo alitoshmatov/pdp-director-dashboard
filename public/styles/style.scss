@@ -1,0 +1,233 @@
+// Fonts
+@font-face {
+  src: url("../fonts/SFProDisplay-Bold.ttf");
+  font-family: SF-Bold;
+}
+
+@font-face {
+  font-family: SF-Medium;
+  src: url("../fonts/SFProDisplay-Medium.ttf");
+}
+
+@font-face {
+  src: url("../fonts/SFProDisplay-Heavy.ttf");
+  font-family: SF-Heavy;
+}
+
+@font-face {
+  src: url("../fonts/SFProDisplay-LightItalic.ttf");
+  font-family: SF-LightItalic;
+}
+
+@font-face {
+  src: url("../fonts/SFProDisplay-Regular.ttf");
+  font-family: SF-Regular;
+}
+
+@font-face {
+  src: url("../fonts/SFProDisplay-SemiBold.ttf");
+  font-family: SF-SemiBold;
+}
+
+@font-face {
+  src: url("../fonts/Lato-Bold.ttf");
+  font-family: Lato-Bold;
+}
+
+// COLORS
+$light-grey: #bebebe;
+$text-dark: #262626;
+$brand-green: #00b533;
+$text-ligh: #898989;
+$main-border: #f8f8f8;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+}
+
+// GLOBAL CSS STYLES
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.align-center {
+  align-items: center;
+}
+.space-between {
+  justify-content: space-between;
+}
+.align-end {
+  align-items: flex-end;
+}
+
+// COMPONENTS
+
+// Texts
+.text-bold-14 {
+  font-family: SF-Bold;
+  font-size: 14px;
+  color: $text-dark;
+}
+
+.text-regular-14 {
+  font-family: SF-Regular;
+  font-size: 14px;
+  color: $text-ligh;
+}
+
+.text-regular-16 {
+  font-family: SF-Regular;
+  font-size: 16px;
+  color: $text-ligh;
+}
+
+.text-medium-16 {
+  font-family: SF-Medium;
+  color: $text-dark;
+}
+.text-medium-10 {
+  font-family: SF-Medium;
+  color: $text-dark;
+  font-size: 10px;
+}
+.text-medium-14 {
+  font-family: SF-Medium;
+  color: $text-dark;
+  font-size: 14px;
+}
+
+.text-heavy-40 {
+  font-family: SF-Heavy;
+  font-size: 40px;
+}
+
+.custom-text {
+  color: $text-dark;
+  font-family: SF-SemiBold;
+  font-size: 30px;
+}
+
+.menu {
+  display: inline-block;
+  padding: 45px 55px;
+  width: 20%;
+  height: 100vh;
+  position: fixed;
+  border-right: 1px solid $light-grey;
+
+  .menu-buttons {
+    max-width: 60%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    svg {
+      fill: $light-grey;
+      flex: 0 0 60px;
+    }
+
+    p {
+      font-family: SF-Medium;
+      color: $light-grey;
+    }
+  }
+
+  .active-menu-button {
+    p {
+      color: $text-dark;
+    }
+
+    svg {
+      fill: $brand-green;
+    }
+  }
+
+  .menu-buttons-bottom {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 45px;
+  }
+
+  .menu-buttons-middle {
+    margin-top: 80px;
+  }
+}
+
+.dashboard {
+  position: absolute;
+  right: 0;
+  width: 80%;
+  display: inline-block;
+  padding: 45px 55px;
+
+  .profile {
+    align-items: center;
+    justify-content: flex-end;
+
+    svg {
+      margin-left: 30px;
+    }
+  }
+
+  .data-block {
+    // border: 3px solid $main-border;
+    box-shadow: 0px 0px 1px grey; //  !Alternative for border remove margin -3px do use
+  }
+
+  .sm-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 40px;
+    // margin-left: -3px;
+    width: 25%;
+    height: 25vh;
+    padding: 20px;
+  }
+
+  .graph-column {
+    width: 70%;
+  }
+
+  .total-income {
+    padding: 20px;
+    height: 25vh;
+    justify-content: space-between;
+  }
+  .type-change-btn {
+    background-color: #f8f8f8;
+    border-radius: 50px;
+    padding: 6px;
+    a {
+      text-decoration: none;
+      color: $text-dark;
+      padding: 6px 13px;
+      font-size: 10px;
+      font-family: SF-Medium;
+      opacity: 0.3;
+      border-radius: 40px;
+      transition: linear;
+      transition-duration: 0.1s;
+      transition-property: all;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    .active {
+      background-color: white;
+      opacity: 1;
+      box-shadow: 0px 2px 1px #c0bfbf;
+    }
+  }
+}

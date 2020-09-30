@@ -1,0 +1,26 @@
+{
+    "data": {
+        "students": {
+            "all": {
+                "all": 620,
+                "added": 32
+            },
+            "active": {
+                "all": 510,
+                "added": 27
+            },
+            "completed": {
+                "all": 100,
+                "added": 25
+            },
+            "paused": {
+                "all": 50,
+                "added": 2
+            }
+        }
+    },
+    "income": {
+        "real": 400000000,
+        "unreal": 12500000
+    }
+}

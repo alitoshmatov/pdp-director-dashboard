@@ -1,0 +1,265 @@
+@font-face {
+  src: url("../fonts/SFProDisplay-Bold.ttf");
+  font-family: SF-Bold;
+}
+
+@font-face {
+  font-family: SF-Medium;
+  src: url("../fonts/SFProDisplay-Medium.ttf");
+}
+
+@font-face {
+  src: url("../fonts/SFProDisplay-Heavy.ttf");
+  font-family: SF-Heavy;
+}
+
+@font-face {
+  src: url("../fonts/SFProDisplay-LightItalic.ttf");
+  font-family: SF-LightItalic;
+}
+
+@font-face {
+  src: url("../fonts/SFProDisplay-Regular.ttf");
+  font-family: SF-Regular;
+}
+
+@font-face {
+  src: url("../fonts/SFProDisplay-SemiBold.ttf");
+  font-family: SF-SemiBold;
+}
+
+@font-face {
+  src: url("../fonts/Lato-Bold.ttf");
+  font-family: Lato-Bold;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.flex-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.align-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.space-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.align-end {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.text-bold-14 {
+  font-family: SF-Bold;
+  font-size: 14px;
+  color: #262626;
+}
+
+.text-regular-14 {
+  font-family: SF-Regular;
+  font-size: 14px;
+  color: #898989;
+}
+
+.text-regular-16 {
+  font-family: SF-Regular;
+  font-size: 16px;
+  color: #898989;
+}
+
+.text-medium-16 {
+  font-family: SF-Medium;
+  color: #262626;
+}
+
+.text-medium-10 {
+  font-family: SF-Medium;
+  color: #262626;
+  font-size: 10px;
+}
+
+.text-medium-14 {
+  font-family: SF-Medium;
+  color: #262626;
+  font-size: 14px;
+}
+
+.text-heavy-40 {
+  font-family: SF-Heavy;
+  font-size: 40px;
+}
+
+.custom-text {
+  color: #262626;
+  font-family: SF-SemiBold;
+  font-size: 30px;
+}
+
+.menu {
+  display: inline-block;
+  padding: 45px 55px;
+  width: 20%;
+  height: 100vh;
+  position: fixed;
+  border-right: 1px solid #bebebe;
+}
+
+.menu .menu-buttons {
+  max-width: 60%;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.menu .menu-buttons svg {
+  fill: #bebebe;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 60px;
+          flex: 0 0 60px;
+}
+
+.menu .menu-buttons p {
+  font-family: SF-Medium;
+  color: #bebebe;
+}
+
+.menu .active-menu-button p {
+  color: #262626;
+}
+
+.menu .active-menu-button svg {
+  fill: #00b533;
+}
+
+.menu .menu-buttons-bottom {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 45px;
+}
+
+.menu .menu-buttons-middle {
+  margin-top: 80px;
+}
+
+.dashboard {
+  position: absolute;
+  right: 0;
+  width: 80%;
+  display: inline-block;
+  padding: 45px 55px;
+}
+
+.dashboard .profile {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.dashboard .profile svg {
+  margin-left: 30px;
+}
+
+.dashboard .data-block {
+  -webkit-box-shadow: 0px 0px 1px grey;
+          box-shadow: 0px 0px 1px grey;
+}
+
+.dashboard .sm-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 40px;
+  width: 25%;
+  height: 25vh;
+  padding: 20px;
+}
+
+.dashboard .graph-column {
+  width: 70%;
+}
+
+.dashboard .total-income {
+  padding: 20px;
+  height: 25vh;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.dashboard .type-change-btn {
+  background-color: #f8f8f8;
+  border-radius: 50px;
+  padding: 6px;
+}
+
+.dashboard .type-change-btn a {
+  text-decoration: none;
+  color: #262626;
+  padding: 6px 13px;
+  font-size: 10px;
+  font-family: SF-Medium;
+  opacity: 0.3;
+  border-radius: 40px;
+  -webkit-transition: linear;
+  transition: linear;
+  -webkit-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+  -webkit-transition-property: all;
+  transition-property: all;
+}
+
+.dashboard .type-change-btn a:hover {
+  opacity: 1;
+}
+
+.dashboard .type-change-btn .active {
+  background-color: white;
+  opacity: 1;
+  -webkit-box-shadow: 0px 2px 1px #c0bfbf;
+          box-shadow: 0px 2px 1px #c0bfbf;
+}
+/*# sourceMappingURL=style.css.map */
