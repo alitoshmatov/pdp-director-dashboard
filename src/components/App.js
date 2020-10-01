@@ -5,11 +5,10 @@ import CustomChart from "./Dashboard/chart";
 
 function App() {
   return (
-    // <div className="app flex-row">
-    //   <Menu />
-    //   <Dashboard />
-    // </div>
-    <CustomChart />
+    <div className="app flex-row">
+      <Menu />
+      <Dashboard />
+    </div>
   );
 }
 
