@@ -22,6 +22,28 @@ function DonutChart(props) {
   let state = {
     series: props.data.values,
     options: {
+      responsive: [
+        {
+          breakpoint: 1400,
+          options: {
+            plotOptions: {
+              pie: {
+                customScale: 1,
+              },
+            },
+          },
+        },
+        {
+          breakpoint: 3000,
+          options: {
+            plotOptions: {
+              pie: {
+                customScale: 0.8,
+              },
+            },
+          },
+        },
+      ],
       tooltip: {
         y: {
           formatter: function (value) {
