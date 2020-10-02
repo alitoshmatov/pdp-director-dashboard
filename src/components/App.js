@@ -1,13 +1,15 @@
 import React from "react";
 import Menu from "./Menu/Menu";
 import Dashboard from "./Dashboard/Dashboard";
-import CustomChart from "./Dashboard/chart";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="app flex-row">
-      <Menu />
-      <Dashboard />
+      <Router>
+        <Menu />
+        <Route path="/" component={Dashboard} />
+      </Router>
     </div>
   );
 }

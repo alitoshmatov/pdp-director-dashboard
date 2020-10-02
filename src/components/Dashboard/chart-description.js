@@ -1,16 +1,5 @@
 import React from "react";
-import {
-  TextBold14,
-  TextMedium16,
-  TextRegular14,
-  TextSB30,
-  TextHeavy40,
-  TextRegular16,
-  TextMedium14,
-  TextMedium10,
-} from "./texts";
-import { CalendarIcon, CircleIcon } from "../icons";
-import Chart from "./chart";
+import { TextBold14 } from "./texts";
 import Calendar from "./calendar";
 import LegendChart from "./legend-chart";
 
