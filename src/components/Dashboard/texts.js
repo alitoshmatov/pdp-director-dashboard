@@ -7,6 +7,13 @@ function TextBold14(props) {
     </p>
   );
 }
+function TextBold12(props) {
+  return (
+    <p className="text-bold-12" style={props.style}>
+      {props.content}
+    </p>
+  );
+}
 function TextMedium14(props) {
   return (
     <p className="text-medium-14" style={props.style}>
@@ -52,7 +59,14 @@ function TextHeavy40(props) {
 }
 function TextSB30(props) {
   return (
-    <p className="custom-text" style={props.style}>
+    <p className="text-sb-30" style={props.style}>
+      {props.content}
+    </p>
+  );
+}
+function TextSB16(props) {
+  return (
+    <p className="text-sb-16" style={props.style}>
       {props.content}
     </p>
   );
@@ -60,11 +74,13 @@ function TextSB30(props) {
 
 export {
   TextBold14,
+  TextSB16,
   TextMedium16,
   TextRegular14,
   TextSB30,
   TextHeavy40,
   TextRegular16,
+  TextBold12,
   TextMedium14,
   TextMedium10,
 };

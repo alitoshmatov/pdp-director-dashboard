@@ -72,12 +72,22 @@ body {}
   align-items: flex-end;
 }
 
+.rotate {
+  transform: rotate(45deg);
+}
+
 // COMPONENTS
 
 // Texts
 .text-bold-14 {
   font-family: SF-Bold;
   font-size: 14px;
+  color: $text-dark;
+}
+
+.text-bold-12 {
+  font-family: SF-Bold;
+  font-size: 12px;
   color: $text-dark;
 }
 
@@ -115,10 +125,16 @@ body {}
   font-size: 40px;
 }
 
-.custom-text {
+.text-sb-30 {
   color: $text-dark;
   font-family: SF-SemiBold;
   font-size: 30px;
+}
+
+.text-sb-16 {
+  color: $text-dark;
+  font-family: SF-SemiBold;
+  font-size: 16px;
 }
 
 .menu {
@@ -172,7 +188,6 @@ body {}
   position: absolute;
   right: 0;
   width: 80%;
-  display: inline-block;
   padding: 45px 55px;
 
   .profile {
@@ -196,7 +211,7 @@ body {}
     margin-top: 40px;
     // margin-left: -3px;
     width: 25%;
-    height: 25vh;
+    height: 180px;
     padding: 20px;
   }
 
@@ -206,7 +221,7 @@ body {}
 
   .total-income {
     padding: 20px;
-    height: 190px;
+    height: 180px;
     justify-content: space-between;
   }
 
@@ -216,8 +231,8 @@ body {}
     padding: 6px;
 
 
-    a {
-      text-decoration: none;
+    p {
+      cursor: pointer;
       color: $text-dark;
       padding: 6px 13px;
       font-size: 10px;
@@ -241,4 +256,64 @@ body {}
   }
 
   .income-chart {}
+
+  .radial-charts {
+    width: 30%;
+  }
+
+  .single-radial-chart {
+    padding: 20px;
+    height: 290px;
+  }
+
+  .mentors-table {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .mentor-table-head {
+    padding: 10px 10px 10px 0;
+    border-bottom: 1px solid black;
+  }
+
+  .mentor-table-row {
+    border-bottom: 1px solid rgb(207, 207, 207); //is not original border-color( #F4F4F4 )
+  }
+
+  .mentor-table-row-witout-course {
+    padding: 24px 10px 24px 0;
+
+  }
+
+  .mentor-courses {
+    background-color: #f9f9f9;
+    border-left: 2px solid $brand-green;
+    overflow-y: hidden;
+    transition: linear;
+    transition-property: all;
+    transition-duration: .3s;
+    opacity: 1;
+  }
+
+  .mentor-course-row {
+    padding: 10px 10px 10px 0;
+  }
+
+  .hide-courses {
+    height: 0;
+    opacity: 0;
+  }
+
+  .plus-icon {
+    transition: linear;
+    transition-property: all;
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0, 1, 0.4, 1);
+  }
+
+  .overall {
+    background-color: #f4f4f4;
+    margin-top: 20px;
+    padding-top: 20px;
+  }
 }

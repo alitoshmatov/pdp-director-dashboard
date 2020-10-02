@@ -1,12 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import Chart from "react-apexcharts";
-import { TextMedium14, TextRegular14 } from "./texts";
+import FormatMoney, { MillionToM } from "../format-money";
 
 function CustomChart(props) {
   // Setting fake data
 
   let data = props.data;
-  const yLabelForat = data.yLabelFormat;
   //
   let state = {
     options: {
@@ -62,14 +61,19 @@ function CustomChart(props) {
         width: 1,
         dashArray: 0,
       },
-      legend: {
-        markers: {
-          fillColors: ["#00B533", "#ffb436"],
-        },
-      },
+
       tooltip: {
         marker: {
           fillColors: ["#00B533", "#ffb436"],
+        },
+        y: {
+          formatter: function (value) {
+            if (data.isMoney) {
+              return FormatMoney(value);
+            } else {
+              return value;
+            }
+          },
         },
       },
       chart: {
@@ -126,7 +130,11 @@ function CustomChart(props) {
             fontFamily: "SF-Regular",
           },
           formatter: (value) => {
-            return value + " " + yLabelForat;
+            if (data.isMoney) {
+              return MillionToM(value);
+            } else {
+              return value;
+            }
           },
         },
         title: {
@@ -146,6 +154,9 @@ function CustomChart(props) {
 
       legend: {
         show: false,
+        markers: {
+          fillColors: ["#00B533", "#ffb436"],
+        },
       },
     },
     series: [
@@ -154,7 +165,7 @@ function CustomChart(props) {
         data: data.line[0],
       },
       {
-        name: data.lineTitle[1],
+        name: data.lineTitle,
         data: data.line[1],
       },
     ],

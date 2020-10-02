@@ -1,13 +1,38 @@
 import React from "react";
 
-function TypeChangeBtn() {
+function TypeChangeBtn(props) {
+  function activeClass(btn) {
+    if (btn === props.active) {
+      return "active";
+    }
+  }
+
   return (
     <div className="type-change-btn flex-row">
-      <a href="">BARCHASI</a>
-      <a href="" className="active">
+      <p
+        className={activeClass(1)}
+        onClick={() => {
+          props.showAll();
+        }}
+      >
+        BARCHASI
+      </p>
+      <p
+        className={activeClass(2)}
+        onClick={() => {
+          props.showReal();
+        }}
+      >
         REAL PUL
-      </a>
-      <a href="">NO REAL PUL</a>
+      </p>
+      <p
+        className={activeClass(3)}
+        onClick={() => {
+          props.showNoReal();
+        }}
+      >
+        NO REAL PUL
+      </p>
     </div>
   );
 }
